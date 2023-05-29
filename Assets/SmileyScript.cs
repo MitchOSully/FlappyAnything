@@ -6,15 +6,9 @@ public class SmileyScript : MonoBehaviour
 {
     public Rigidbody2D smileyRigidBody;
     public float fFlapStrength = 25;
-    public LogicManager logicManager;
-    public bool bIsAlive = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
+    public GameManager gameManager;
+    public bool bIsAlive;
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -23,22 +17,18 @@ public class SmileyScript : MonoBehaviour
             {
                 smileyRigidBody.velocity = Vector2.up * fFlapStrength;
             }
-            else
-            {
-                logicManager.RestartGame();
-            }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        logicManager.GameOver();
+        gameManager.GameOver();
         bIsAlive = false;
     }
 
     private void OnBecameInvisible()
     {
-        logicManager.GameOver();
+        gameManager.GameOver();
         bIsAlive = false;
     }
 }

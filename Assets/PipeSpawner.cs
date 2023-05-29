@@ -10,16 +10,6 @@ public class PipeSpawner : MonoBehaviour
 
     private float fTimer = 0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        float fPipeSpeed = pipeDuo.GetComponent<PipeMove>().fMoveSpeed;
-        SpawnPipe(fPipeSpeed * fSpawnRate * 2);
-        SpawnPipe(fPipeSpeed * fSpawnRate);
-        SpawnPipe();
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (fTimer < fSpawnRate)
@@ -32,6 +22,14 @@ public class PipeSpawner : MonoBehaviour
             fTimer = 0;
         }
     }
+    public void StartGame()
+    {
+        fTimer = 0f;
+        float fPipeSpeed = pipeDuo.GetComponent<PipeMove>().fMoveSpeed;
+        SpawnPipe(fPipeSpeed * fSpawnRate * 2);
+        SpawnPipe(fPipeSpeed * fSpawnRate);
+        SpawnPipe();
+    }
 
     void SpawnPipe()
     {
@@ -41,7 +39,7 @@ public class PipeSpawner : MonoBehaviour
     void SpawnPipe(float fXPos)
     {
         float fLowestPoint = transform.position.y - fPipeHeightOffset;
-        float fHighestPoint = transform.position.y + fPipeHeightOffset;
+        float fHighestPoint = transform.position.y + fPipeHeightOffset * 0.5f;
 
         Instantiate(pipeDuo, new Vector3(transform.position.x - fXPos, Random.Range(fLowestPoint, fHighestPoint), 0), transform.rotation);
     }
