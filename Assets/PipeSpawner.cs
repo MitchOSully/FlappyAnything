@@ -41,7 +41,7 @@ public class PipeSpawner : MonoBehaviour
     void SpawnPipe(float fXPos)
     {
         float fLowestPoint = transform.position.y - fPipeHeightOffset;
-        float fHighestPoint = transform.position.y + fPipeHeightOffset;
+        float fHighestPoint = transform.position.y + fPipeHeightOffset * 0.5f;
 
         Instantiate(pipeDuo, new Vector3(transform.position.x - fXPos, Random.Range(fLowestPoint, fHighestPoint), 0), transform.rotation);
     }
