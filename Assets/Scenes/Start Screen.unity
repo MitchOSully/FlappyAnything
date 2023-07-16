@@ -429,7 +429,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.20000002, g: 0.28235295, b: 0.35686275, a: 0}
+  m_BackGroundColor: {r: 0.12941177, g: 0.29411766, b: 0.4431373, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -594,7 +594,7 @@ Animator:
   m_GameObject: {fileID: 579727055}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 05170794dad5ccb4fa0aa280e20b3fae, type: 2}
+  m_Controller: {fileID: 9100000, guid: 04b250aec1ad1bf42b9fcea30a90c654, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c609d4ea57eb1ee4ca060319d16885fe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: baa94503c20c8864c9ee4d19617324ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
