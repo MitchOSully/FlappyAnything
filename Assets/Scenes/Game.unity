@@ -421,11 +421,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4cfab5af1f00194e9fe2f3e362266c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iScore: 0
-  scoreText: {fileID: 68564246}
-  gameOverScreen: {fileID: 1426404979}
-  highScoreText: {fileID: 209171436}
-  smiley: {fileID: 406789572}
+  m_iScore: 0
+  m_scoreText: {fileID: 68564246}
+  m_gameOverScreen: {fileID: 1426404979}
+  m_highScoreText: {fileID: 209171436}
+  m_smiley: {fileID: 406789572}
 --- !u!4 &113616100
 Transform:
   m_ObjectHideFlags: 0
@@ -712,10 +712,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f31ab71acd6fe40ade6fd013773d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smileyRigidBody: {fileID: 406789570}
-  fFlapStrength: 25.71
-  logicManager: {fileID: 113616099}
-  bIsAlive: 1
+  m_smileyRigidBody: {fileID: 406789570}
+  m_fFlapStrength: 25
+  m_logicManager: {fileID: 113616099}
+  m_bIsAlive: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,9 +829,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f520ebbcae0e2049996b253a9b151df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipeDuo: {fileID: 3299683458245501171, guid: e248047343d601849a154741b82d9f8e, type: 3}
-  fSpawnRate: 3.5
-  fPipeHeightOffset: 8
+  m_pipeDuo: {fileID: 3299683458245501171, guid: e248047343d601849a154741b82d9f8e, type: 3}
+  m_fSpawnRate: 3.5
+  m_fPipeHeightOffset: 8
 --- !u!4 &956124855
 Transform:
   m_ObjectHideFlags: 0

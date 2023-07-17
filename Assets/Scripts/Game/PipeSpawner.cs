@@ -4,32 +4,30 @@ using UnityEngine;
 
 public class PipeSpawner : MonoBehaviour
 {
-    public GameObject pipeDuo;
-    public float fSpawnRate = 3.5f;
-    public float fPipeHeightOffset = 8f;
+    public GameObject m_pipeDuo;
+    public float m_fSpawnRate = 3.5f;
+    public float m_fPipeHeightOffset = 8f;
 
-    private float fTimer = 0f;
+    private float m_fTimer = 0f;
 
-    // Start is called before the first frame update
     void Start()
     {
-        float fPipeSpeed = pipeDuo.GetComponent<PipeMove>().fMoveSpeed;
-        SpawnPipe(fPipeSpeed * fSpawnRate * 2);
-        SpawnPipe(fPipeSpeed * fSpawnRate);
+        float fPipeSpeed = m_pipeDuo.GetComponent<PipeMove>().m_fMoveSpeed;
+        SpawnPipe(fPipeSpeed * m_fSpawnRate * 2);
+        SpawnPipe(fPipeSpeed * m_fSpawnRate);
         SpawnPipe();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (fTimer < fSpawnRate)
+        if (m_fTimer < m_fSpawnRate)
         {
-            fTimer += Time.deltaTime;
+            m_fTimer += Time.deltaTime;
         }
         else
         {
             SpawnPipe();
-            fTimer = 0;
+            m_fTimer = 0;
         }
     }
 
@@ -40,9 +38,9 @@ public class PipeSpawner : MonoBehaviour
 
     void SpawnPipe(float fXPos)
     {
-        float fLowestPoint = transform.position.y - fPipeHeightOffset;
-        float fHighestPoint = transform.position.y + fPipeHeightOffset * 0.5f;
+        float fLowestPoint = transform.position.y - m_fPipeHeightOffset;
+        float fHighestPoint = transform.position.y + m_fPipeHeightOffset * 0.5f;
 
-        Instantiate(pipeDuo, new Vector3(transform.position.x - fXPos, Random.Range(fLowestPoint, fHighestPoint), 0), transform.rotation);
+        Instantiate(m_pipeDuo, new Vector3(transform.position.x - fXPos, Random.Range(fLowestPoint, fHighestPoint), 0), transform.rotation);
     }
 }

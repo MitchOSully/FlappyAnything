@@ -6,35 +6,35 @@ using UnityEngine.SceneManagement;
 
 public class LogicManager : MonoBehaviour
 {
-    public int iScore = 0;
-    public TextMeshProUGUI scoreText;
-    public GameObject gameOverScreen;
-    public TextMeshProUGUI highScoreText;
-    public SmileyScript smiley;
+    public int m_iScore = 0;
+    public TextMeshProUGUI m_scoreText;
+    public GameObject m_gameOverScreen;
+    public TextMeshProUGUI m_highScoreText;
+    public SmileyScript m_smiley;
 
     private void Start()
     {
-        highScoreText.SetText(PlayerPrefs.GetInt("HighScore", 0).ToString());
+        m_highScoreText.SetText(PlayerPrefs.GetInt("HighScore", 0).ToString());
     }
 
     [ContextMenu("Increase Score")]
     public void IncreaseScore(int iScoreToAdd)
     {
-        if (smiley.bIsAlive)
+        if (m_smiley.m_bIsAlive)
         {
-            iScore += iScoreToAdd;
-            scoreText.SetText(iScore.ToString());
+            m_iScore += iScoreToAdd;
+            m_scoreText.SetText(m_iScore.ToString());
             
             if (UpdateHighScore())
             {
-                highScoreText.SetText(PlayerPrefs.GetInt("HighScore", 0).ToString());
+                m_highScoreText.SetText(PlayerPrefs.GetInt("HighScore", 0).ToString());
             }
         }
     }
 
     public void GameOver()
     {
-        gameOverScreen.SetActive(true);
+        m_gameOverScreen.SetActive(true);
     }
 
     public void RestartGame()
@@ -51,9 +51,9 @@ public class LogicManager : MonoBehaviour
     private bool UpdateHighScore()
     {
         bool bUpdated = false;
-        if (iScore > PlayerPrefs.GetInt("HighScore", 0))
+        if (m_iScore > PlayerPrefs.GetInt("HighScore", 0))
         {
-            PlayerPrefs.SetInt("HighScore", iScore);
+            PlayerPrefs.SetInt("HighScore", m_iScore);
             bUpdated = true;
         }
 

@@ -4,36 +4,35 @@ using UnityEngine;
 
 public class SmileyScript : MonoBehaviour
 {
-    public Rigidbody2D smileyRigidBody;
-    public float fFlapStrength = 25;
-    public LogicManager logicManager;
-    public bool bIsAlive = true;
+    public Rigidbody2D m_smileyRigidBody;
+    public float m_fFlapStrength = 25;
+    public LogicManager m_logicManager;
+    public bool m_bIsAlive = true;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (bIsAlive)
+            if (m_bIsAlive)
             {
-                smileyRigidBody.velocity = Vector2.up * fFlapStrength;
+                m_smileyRigidBody.velocity = Vector2.up * m_fFlapStrength;
             }
             else
             {
-                logicManager.RestartGame();
+                m_logicManager.RestartGame();
             }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        logicManager.GameOver();
-        bIsAlive = false;
+        m_logicManager.GameOver();
+        m_bIsAlive = false;
     }
 
     private void OnBecameInvisible()
     {
-        logicManager.GameOver();
-        bIsAlive = false;
+        m_logicManager.GameOver();
+        m_bIsAlive = false;
     }
 }

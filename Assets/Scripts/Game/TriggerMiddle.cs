@@ -4,27 +4,20 @@ using UnityEngine;
 
 public class TriggerMiddle : MonoBehaviour
 {
-    public LogicManager logicManager;
-
     private const int PLAYER_LAYER = 3;
+    
+    public LogicManager m_logicManager;
 
-    // Start is called before the first frame update
     void Start()
     {
-        logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        m_logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == PLAYER_LAYER)
         {
-            logicManager.IncreaseScore(1);
+            m_logicManager.IncreaseScore(1);
         }
     }
 }
