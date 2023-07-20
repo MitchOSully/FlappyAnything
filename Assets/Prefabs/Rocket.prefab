@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 1820677948410033188}
   - component: {fileID: 1820677948410033189}
   - component: {fileID: 7419142303785300774}
-  - component: {fileID: 6884541720945113561}
-  m_Layer: 3
+  - component: {fileID: -3094096132851030684}
+  - component: {fileID: 10431012125462471}
+  m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +123,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_eDirection: 0
   m_fMoveSpeed: 12
---- !u!70 &6884541720945113561
+--- !u!114 &-3094096132851030684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820677948410033211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75878d0186dfc3e45a71b4ac0b9f6161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &10431012125462471
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,9 +145,9 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.1}
-  m_Size: {x: 1.27, y: 5.47}
+  m_Offset: {x: 0, y: -0.17}
+  m_Size: {x: 1.12, y: 5.88}
   m_Direction: 0

@@ -10,7 +10,7 @@ public class CGameManager : MonoBehaviour
     public TextMeshProUGUI m_scoreText;
     public GameObject m_gameOverScreen;
     public TextMeshProUGUI m_highScoreText;
-    public CSmileyScript m_smiley;
+    public CPlayer m_player;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class CGameManager : MonoBehaviour
     [ContextMenu("Increase Score")]
     public void IncreaseScore(int iScoreToAdd)
     {
-        if (m_smiley.m_bIsAlive)
+        if (m_player.m_bIsAlive)
         {
             m_iScore += iScoreToAdd;
             m_scoreText.SetText(m_iScore.ToString());
@@ -30,6 +30,12 @@ public class CGameManager : MonoBehaviour
                 m_highScoreText.SetText(PlayerPrefs.GetInt("HighScore", 0).ToString());
             }
         }
+    }
+
+    public void KillPlayer()
+    {
+        m_player.m_bIsAlive = false;
+        GameOver();
     }
 
     public void GameOver()

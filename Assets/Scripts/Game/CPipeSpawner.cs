@@ -9,8 +9,8 @@ public class CPipeSpawner : CObjectSpawner
         if (scrAutoMove)
             {
             float fPipeSpeed = scrAutoMove.m_fMoveSpeed;
-            Spawn(fPipeSpeed * m_fSpawnRate * 2);
-            Spawn(fPipeSpeed * m_fSpawnRate);
+            Spawn(fPipeSpeed * m_fSpawnDeltaTime * 2);
+            Spawn(fPipeSpeed * m_fSpawnDeltaTime);
             Spawn();
             }
     }

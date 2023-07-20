@@ -5,14 +5,14 @@ using UnityEngine;
 public class CObjectSpawner : MonoBehaviour
 {
     public GameObject m_prefab;
-    public float m_fSpawnRate = 3.5f;
+    public float m_fSpawnDeltaTime = 3.5f;
     public float m_fVerticalOffset = 8f;
 
-    private float m_fTimer = 0f;
+    protected float m_fTimer = 0f;
 
-    void Update()
+    protected virtual void Update()
     {
-        if (m_fTimer < m_fSpawnRate)
+        if (m_fTimer < m_fSpawnDeltaTime)
         {
             m_fTimer += Time.deltaTime;
         }

@@ -401,7 +401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 99359140}
-  - component: {fileID: 99359139}
+  - component: {fileID: 99359141}
   m_Layer: 0
   m_Name: Rocket Spawner
   m_TagString: Untagged
@@ -409,21 +409,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &99359139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 99359138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f520ebbcae0e2049996b253a9b151df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_prefab: {fileID: 1820677948410033211, guid: 0faaaadb035497a4493cb38cc2634827, type: 3}
-  m_fSpawnRate: 3.5
-  m_fVerticalOffset: 8
 --- !u!4 &99359140
 Transform:
   m_ObjectHideFlags: 0
@@ -432,13 +417,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99359138}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 29.74, y: 0, z: 0}
+  m_LocalPosition: {x: 30, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &99359141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99359138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec2bba5d3e69dd488ac08a94e95ba27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_prefab: {fileID: 1820677948410033211, guid: 0faaaadb035497a4493cb38cc2634827, type: 3}
+  m_fSpawnDeltaTime: 3.5
+  m_fVerticalOffset: 8
+  m_fStartWaitTime: 6
+  m_rocketMoveScript: {fileID: 7419142303785300774, guid: 0faaaadb035497a4493cb38cc2634827, type: 3}
+  m_pipeMoveScript: {fileID: 3299683458245501169, guid: e248047343d601849a154741b82d9f8e, type: 3}
+  m_pipeSpawner: {fileID: 956124856}
+  m_pipePrefab: {fileID: 3299683458245501171, guid: e248047343d601849a154741b82d9f8e, type: 3}
 --- !u!1 &113616098
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +477,7 @@ MonoBehaviour:
   m_scoreText: {fileID: 68564246}
   m_gameOverScreen: {fileID: 1426404979}
   m_highScoreText: {fileID: 209171436}
-  m_smiley: {fileID: 406789572}
+  m_player: {fileID: 406789572}
 --- !u!4 &113616100
 Transform:
   m_ObjectHideFlags: 0
@@ -637,8 +642,8 @@ GameObject:
   - component: {fileID: 406789571}
   - component: {fileID: 406789572}
   m_Layer: 3
-  m_Name: Smiley
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -759,7 +764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f31ab71acd6fe40ade6fd013773d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_smileyRigidBody: {fileID: 406789570}
+  m_rigidBody: {fileID: 406789570}
   m_fFlapStrength: 25
   m_gameManager: {fileID: 113616099}
   m_bIsAlive: 1
@@ -872,7 +877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956124853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.74, y: 0, z: 0}
+  m_LocalPosition: {x: 30, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -892,7 +897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_prefab: {fileID: 3299683458245501171, guid: e248047343d601849a154741b82d9f8e, type: 3}
-  m_fSpawnRate: 3.5
+  m_fSpawnDeltaTime: 3.5
   m_fVerticalOffset: 8
 --- !u!1 &1286626767
 GameObject:
