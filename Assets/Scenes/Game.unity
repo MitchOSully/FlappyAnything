@@ -439,7 +439,7 @@ MonoBehaviour:
   m_prefab: {fileID: 1820677948410033211, guid: 0faaaadb035497a4493cb38cc2634827, type: 3}
   m_fSpawnDeltaTime: 3.5
   m_fVerticalOffset: 8
-  m_fStartWaitTime: 6
+  m_fStartWaitTime: 33.75
   m_rocketMoveScript: {fileID: 7419142303785300774, guid: 0faaaadb035497a4493cb38cc2634827, type: 3}
   m_pipeMoveScript: {fileID: 3299683458245501169, guid: e248047343d601849a154741b82d9f8e, type: 3}
   m_pipeSpawner: {fileID: 956124856}
