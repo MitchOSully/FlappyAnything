@@ -5,7 +5,7 @@ using UnityEngine;
 public class CExplodeOnTriggerEnter : MonoBehaviour
 {
     public GameObject m_explosionPrefab;
-    public float m_fForceScale = 1f;
+    public float m_fForceScale = 1000f;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
