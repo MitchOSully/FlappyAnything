@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7419142303785300774}
   - component: {fileID: -3094096132851030684}
   - component: {fileID: 10431012125462471}
+  - component: {fileID: 4323783381645793047}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -29,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820677948410033211}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5762776, y: 0.5762776, z: 0.720347}
+  m_LocalPosition: {x: -0.021036, y: 0, z: 0}
+  m_LocalScale: {x: 0.57627, y: 0.57627, z: 0.57627}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -151,3 +152,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.17}
   m_Size: {x: 1.12, y: 5.88}
   m_Direction: 0
+--- !u!114 &4323783381645793047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820677948410033211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd407e30c7d1d94c98e5ec5fd2b2682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_explosionPrefab: {fileID: 5816526200482872159, guid: 31e7ff92821f42947abff33f4b21761c, type: 3}
+  m_fForceScale: 1000
