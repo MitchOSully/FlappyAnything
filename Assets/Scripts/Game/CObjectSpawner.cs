@@ -6,7 +6,7 @@ public class CObjectSpawner : MonoBehaviour
 {
     public GameObject m_prefab;
     public float m_fSpawnDeltaTime = 3.5f;
-    public float m_fVerticalOffset = 8f;
+    public float m_fVerticalOffset = 6.5f;
 
     protected float m_fTimer = 0f;
 

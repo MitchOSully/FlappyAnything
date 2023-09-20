@@ -898,7 +898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_prefab: {fileID: 3299683458245501171, guid: e248047343d601849a154741b82d9f8e, type: 3}
   m_fSpawnDeltaTime: 3.5
-  m_fVerticalOffset: 8
+  m_fVerticalOffset: 6.5
 --- !u!1 &1286626767
 GameObject:
   m_ObjectHideFlags: 0
