@@ -23,12 +23,7 @@ public class CObjectSpawner : MonoBehaviour
         }
     }
 
-    protected void Spawn()
-    {
-        Spawn(0);
-    }
-
-    protected void Spawn(float fXPos)
+    protected void Spawn(float fXPos = 0)
     {
         float fLowestPoint = transform.position.y - m_fVerticalOffset;
         float fHighestPoint = transform.position.y + m_fVerticalOffset * 0.5f;

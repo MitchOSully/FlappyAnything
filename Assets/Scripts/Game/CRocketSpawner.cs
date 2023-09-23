@@ -4,7 +4,6 @@ using UnityEngine;
 public class CRocketSpawner : CObjectSpawner
 {
     public float m_fStartWaitTime = 0;
-    public CAutoMove m_rocketMoveScript;
     public CAutoMove m_pipeMoveScript;
     public CPipeSpawner m_pipeSpawner;
     public GameObject m_pipePrefab;
@@ -17,7 +16,6 @@ public class CRocketSpawner : CObjectSpawner
         float fPipeWidth = (pipeBoxCollider != null) ? pipeBoxCollider.size.x : 0;
         float fPipeSpeed = m_pipeMoveScript.m_fMoveSpeed;
         float fPipeSpawnDeltaTime = m_pipeSpawner.m_fSpawnDeltaTime;
-        float fRocketSpeed = m_rocketMoveScript.m_fMoveSpeed;
         float fPipeGapLength = fPipeSpeed * fPipeSpawnDeltaTime - fPipeWidth;
 
         m_fSpawnDeltaTime = (fPipeGapLength + fPipeWidth) / fPipeSpeed;

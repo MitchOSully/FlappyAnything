@@ -7,7 +7,7 @@ public class CPipeSpawner : CObjectSpawner
     {
         CAutoMove scrAutoMove = m_prefab.GetComponent<CAutoMove>();
         if (scrAutoMove)
-            {
+        {
             float fPipeSpeed = scrAutoMove.m_fMoveSpeed;
             Spawn(fPipeSpeed * m_fSpawnDeltaTime * 2);
             Spawn(fPipeSpeed * m_fSpawnDeltaTime);

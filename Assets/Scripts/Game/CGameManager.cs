@@ -11,6 +11,7 @@ public class CGameManager : MonoBehaviour
     public GameObject m_gameOverScreen;
     public TextMeshProUGUI m_highScoreText;
     public CPlayer m_player;
+    public GameObject m_rocketSpawner;
 
     private void Start()
     {
@@ -41,6 +42,7 @@ public class CGameManager : MonoBehaviour
     public void GameOver()
     {
         m_gameOverScreen.SetActive(true);
+        m_rocketSpawner.SetActive(false);
     }
 
     public void RestartGame()
