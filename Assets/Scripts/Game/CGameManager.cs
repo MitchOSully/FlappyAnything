@@ -50,10 +50,9 @@ public class CGameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    const int START_SCREEN_SCENE_ID = 0;
     public void QuitToMenu()
     {
-        SceneManager.LoadScene(START_SCREEN_SCENE_ID); 
+        SceneManager.LoadScene(C.SCENE_ID_START_SCREEN); 
     }
 
     private bool UpdateHighScore()

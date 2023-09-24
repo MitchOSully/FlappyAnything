@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CTriggerMiddle : MonoBehaviour
 {
-    private const int PLAYER_LAYER = 3;
-    
     public CGameManager m_gameManager;
 
     void Start()

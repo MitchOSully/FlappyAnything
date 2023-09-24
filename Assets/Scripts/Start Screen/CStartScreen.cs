@@ -15,11 +15,15 @@ public class CStartScreen : MonoBehaviour
 
     public void PlayGame()
     {
-        //Load next scene in queue
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(C.SCENE_ID_GAME);
     }
 
-    public void QuitGame()
+    public void ShowSkins()
+    {
+        SceneManager.LoadScene(C.SCENE_ID_SKINS);
+    }
+
+    public void ExitGame()
     {
         Debug.Log("Exiting game");
         Application.Quit();
