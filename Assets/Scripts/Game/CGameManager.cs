@@ -50,10 +50,10 @@ public class CGameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void ExitGame()
+    const int START_SCREEN_SCENE_ID = 0;
+    public void QuitToMenu()
     {
-        Debug.Log("Exiting game");
-        Application.Quit();
+        SceneManager.LoadScene(START_SCREEN_SCENE_ID); 
     }
 
     private bool UpdateHighScore()
