@@ -37,4 +37,13 @@ public class CStartScreen : MonoBehaviour
         Debug.Log("Exiting game");
         Application.Quit();
     }
+
+    public void ResetGame()
+    {
+        //TO DO: Are you sure? This cannot be undone.
+        //       Your highscore will be reset and all themes will be locked again
+        PlayerPrefs.SetInt("HighScore", 0);
+        CThemeManager.Instance.m_themeID = C.THEME_ID_BASIC;
+        m_playerImage.sprite = CThemeManager.CurrentPlayer();
+    }
 }
