@@ -31,6 +31,13 @@ public class CRocketSpawner : CObjectSpawner
         }
     }
 
+    public void UpdateRocketSkin()
+    {
+        SpriteRenderer rocketSpriteRenderer = m_prefab.GetComponent<SpriteRenderer>();
+        if (rocketSpriteRenderer != null)
+            rocketSpriteRenderer.sprite = CSkinManager.CurrentRocket();
+    }
+
     private float CalculateStartWaitTime()
     {
         float fStartWaitTime = 0; //Return value

@@ -417,7 +417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99359138}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 30, y: 0, z: 0}
+  m_LocalPosition: {x: 35, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -478,7 +478,9 @@ MonoBehaviour:
   m_gameOverScreen: {fileID: 1426404979}
   m_highScoreText: {fileID: 209171436}
   m_player: {fileID: 406789572}
+  m_playerSprite: {fileID: 406789568}
   m_rocketSpawner: {fileID: 99359138}
+  m_pipeSpawner: {fileID: 956124853}
 --- !u!4 &113616100
 Transform:
   m_ObjectHideFlags: 0
@@ -878,7 +880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956124853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 0, z: 0}
+  m_LocalPosition: {x: 35, y: 0, z: 0}
   m_LocalScale: {x: 0.1125, y: 2.6875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

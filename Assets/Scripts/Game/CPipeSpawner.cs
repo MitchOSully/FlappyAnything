@@ -14,4 +14,11 @@ public class CPipeSpawner : CObjectSpawner
             Spawn();
             }
     }
+
+    public void UpdatePipeSkin()
+    {
+        SpriteRenderer[] pipeSpriteRenderers = m_prefab.GetComponentsInChildren<SpriteRenderer>();
+        for (int ii = 0; ii < pipeSpriteRenderers.Length; ii++)
+            pipeSpriteRenderers[ii].sprite = CSkinManager.CurrentPipe();
+    }
 }

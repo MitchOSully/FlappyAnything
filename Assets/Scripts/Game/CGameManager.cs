@@ -11,11 +11,14 @@ public class CGameManager : MonoBehaviour
     public GameObject m_gameOverScreen;
     public TextMeshProUGUI m_highScoreText;
     public CPlayer m_player;
+    public SpriteRenderer m_playerSpriteRenderer;
     public GameObject m_rocketSpawner;
+    public GameObject m_pipeSpawner;
 
     private void Start()
     {
         m_highScoreText.SetText(PlayerPrefs.GetInt("HighScore", 0).ToString());
+        SetSkin();
     }
 
     [ContextMenu("Increase Score")]
@@ -65,5 +68,21 @@ public class CGameManager : MonoBehaviour
         }
 
         return bUpdated;
+    }
+
+    private void SetSkin()
+    {
+        //Player
+        m_playerSpriteRenderer.sprite = CSkinManager.CurrentPlayer();
+
+        //Pipe
+        CPipeSpawner pipeSpawner = m_pipeSpawner.GetComponent<CPipeSpawner>();
+        if (pipeSpawner != null)
+            pipeSpawner.UpdatePipeSkin();
+        
+        //Rocket
+        CRocketSpawner rocketSpawner = m_rocketSpawner.GetComponent<CRocketSpawner>();
+        if (rocketSpawner != null)
+            rocketSpawner.UpdateRocketSkin();
     }
 }
