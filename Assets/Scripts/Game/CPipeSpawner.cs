@@ -15,10 +15,10 @@ public class CPipeSpawner : CObjectSpawner
             }
     }
 
-    public void UpdatePipeSkin()
+    public void UpdatePipeTheme()
     {
         SpriteRenderer[] pipeSpriteRenderers = m_prefab.GetComponentsInChildren<SpriteRenderer>();
         for (int ii = 0; ii < pipeSpriteRenderers.Length; ii++)
-            pipeSpriteRenderers[ii].sprite = CSkinManager.CurrentPipe();
+            pipeSpriteRenderers[ii].sprite = CThemeManager.CurrentPipe();
     }
 }

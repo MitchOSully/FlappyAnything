@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class CSkin
+public class CTheme
 {
     public Sprite m_player;
     public Sprite m_pipe;

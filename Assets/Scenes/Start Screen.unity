@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 579727058}
   - component: {fileID: 579727057}
   m_Layer: 5
-  m_Name: Smiley Image
+  m_Name: Player Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -895,6 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ed740fadc0d044785841d53f1e3b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_playerImage: {fileID: 579727058}
 --- !u!1 &1347108956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,7 +1178,7 @@ GameObject:
   - component: {fileID: 1851381894}
   - component: {fileID: 1851381893}
   m_Layer: 5
-  m_Name: Skins Text
+  m_Name: Themes Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1223,7 +1224,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SKINS
+  m_text: THEMES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: db5d9076a857b71408737414848b4010, type: 2}
@@ -1313,7 +1314,7 @@ GameObject:
   - component: {fileID: 1936705232}
   - component: {fileID: 1936705231}
   m_Layer: 5
-  m_Name: Skins Button
+  m_Name: Themes Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1338,7 +1339,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 215, y: -89.667}
-  m_SizeDelta: {x: 231.9515, y: 100.6667}
+  m_SizeDelta: {x: 330.1, y: 100.6667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936705231
 MonoBehaviour:
@@ -1386,7 +1387,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1149176556}
         m_TargetAssemblyTypeName: CStartScreen, Assembly-CSharp
-        m_MethodName: ShowSkins
+        m_MethodName: ShowThemes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1579,7 +1580,7 @@ GameObject:
   - component: {fileID: 2105847131}
   - component: {fileID: 2105847130}
   m_Layer: 0
-  m_Name: SkinStorage
+  m_Name: ThemeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1597,7 +1598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d84f83991f4c647b3bdaf91b731968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_skins:
+  m_themeID: 0
+  m_themes:
   - m_player: {fileID: 21300000, guid: baa94503c20c8864c9ee4d19617324ab, type: 3}
     m_pipe: {fileID: 21300000, guid: e142d1420f0fcdc47bd3781872405b56, type: 3}
     m_rocket: {fileID: 21300000, guid: 3e35a420c7d03544180bc532aa3b5544, type: 3}

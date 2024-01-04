@@ -478,7 +478,7 @@ MonoBehaviour:
   m_gameOverScreen: {fileID: 1426404979}
   m_highScoreText: {fileID: 209171436}
   m_player: {fileID: 406789572}
-  m_playerSprite: {fileID: 406789568}
+  m_playerSpriteRenderer: {fileID: 406789568}
   m_rocketSpawner: {fileID: 99359138}
   m_pipeSpawner: {fileID: 956124853}
 --- !u!4 &113616100

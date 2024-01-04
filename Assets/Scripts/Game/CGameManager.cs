@@ -18,7 +18,7 @@ public class CGameManager : MonoBehaviour
     private void Start()
     {
         m_highScoreText.SetText(PlayerPrefs.GetInt("HighScore", 0).ToString());
-        SetSkin();
+        SetTheme();
     }
 
     [ContextMenu("Increase Score")]
@@ -70,19 +70,19 @@ public class CGameManager : MonoBehaviour
         return bUpdated;
     }
 
-    private void SetSkin()
+    private void SetTheme()
     {
         //Player
-        m_playerSpriteRenderer.sprite = CSkinManager.CurrentPlayer();
+        m_playerSpriteRenderer.sprite = CThemeManager.CurrentPlayer();
 
         //Pipe
         CPipeSpawner pipeSpawner = m_pipeSpawner.GetComponent<CPipeSpawner>();
         if (pipeSpawner != null)
-            pipeSpawner.UpdatePipeSkin();
+            pipeSpawner.UpdatePipeTheme();
         
         //Rocket
         CRocketSpawner rocketSpawner = m_rocketSpawner.GetComponent<CRocketSpawner>();
         if (rocketSpawner != null)
-            rocketSpawner.UpdateRocketSkin();
+            rocketSpawner.UpdateRocketTheme();
     }
 }

@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: 153cad353ff3c0047bf699e4f11f1f34
   - enabled: 1
-    path: Assets/Scenes/Skins Screen.unity
+    path: Assets/Scenes/Theme Screen.unity
     guid: 821fd6ff7291f0d4b8abd8caf0cada81
   m_configObjects: {}
