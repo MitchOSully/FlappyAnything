@@ -32,18 +32,14 @@ public class CStartScreen : MonoBehaviour
         SceneManager.LoadScene(C.SCENE_ID_THEMES);
     }
 
+    public void Settings()
+    {
+        SceneManager.LoadScene(C.SCENE_ID_SETTINGS);
+    }
+
     public void ExitGame()
     {
         Debug.Log("Exiting game");
         Application.Quit();
-    }
-
-    public void ResetGame()
-    {
-        //TO DO: Are you sure? This cannot be undone.
-        //       Your highscore will be reset and all themes will be locked again
-        PlayerPrefs.SetInt("HighScore", 0);
-        CThemeManager.Instance.m_themeID = C.THEME_ID_BASIC;
-        m_playerImage.sprite = CThemeManager.CurrentPlayer();
     }
 }
