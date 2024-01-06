@@ -7,19 +7,23 @@ public class CObjectSpawner : MonoBehaviour
     public GameObject m_prefab;
     public float m_fSpawnDeltaTime = 3.5f;
     public float m_fVerticalOffset = 6.5f;
+    public CGameManager m_gameManager; //To check if paused
 
     protected float m_fTimer = 0f;
 
     protected virtual void Update()
     {
-        if (m_fTimer < m_fSpawnDeltaTime)
+        if (!m_gameManager.m_bPaused)
         {
-            m_fTimer += Time.deltaTime;
-        }
-        else
-        {
-            Spawn();
-            m_fTimer = 0;
+            if (m_fTimer < m_fSpawnDeltaTime)
+            {
+                m_fTimer += Time.deltaTime;
+            }
+            else
+            {
+                Spawn();
+                m_fTimer = 0;
+            }
         }
     }
 

@@ -9,16 +9,28 @@ public class CGameManager : MonoBehaviour
     public int m_iScore = 0;
     public TextMeshProUGUI m_scoreText;
     public GameObject m_gameOverScreen;
+    public GameObject m_pauseScreen;
     public TextMeshProUGUI m_highScoreText;
     public CPlayer m_player;
     public SpriteRenderer m_playerSpriteRenderer;
     public GameObject m_rocketSpawner;
     public GameObject m_pipeSpawner;
 
+    [System.NonSerialized]
+    public bool m_bPaused = false; //Other GameObjects check this
+
     private void Start()
     {
         m_highScoreText.SetText(PlayerPrefs.GetInt("HighScore", 0).ToString());
         SetTheme();
+    }
+
+    private void Update()
+    {
+        if (m_player.m_bIsAlive && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P)))
+        {
+            PauseGame();
+        }
     }
 
     [ContextMenu("Increase Score")]
@@ -56,6 +68,20 @@ public class CGameManager : MonoBehaviour
     public void QuitToMenu()
     {
         SceneManager.LoadScene(C.SCENE_ID_START_SCREEN); 
+    }
+
+    public void PauseGame()
+    {
+        m_pauseScreen.SetActive(true);
+        m_bPaused = true;
+        m_player.DisableGravity();
+    }
+
+    public void ResumeGame()
+    {
+        m_pauseScreen.SetActive(false);
+        m_bPaused = false;
+        m_player.EnableGravity();
     }
 
     private bool UpdateHighScore()

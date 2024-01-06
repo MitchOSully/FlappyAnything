@@ -20,14 +20,17 @@ public class CRocketSpawner : CObjectSpawner
 
     protected override void Update()
     {
-        if (m_bWaiting)
+        if (!m_gameManager.m_bPaused)
         {
-            m_fTimer += Time.deltaTime;
-            m_bWaiting = (m_fTimer < m_fStartWaitTime);
-        }
-        else
-        {
-            base.Update();
+            if (m_bWaiting)
+            {
+                m_fTimer += Time.deltaTime;
+                m_bWaiting = (m_fTimer < m_fStartWaitTime);
+            }
+            else
+            {
+                base.Update();
+            }
         }
     }
 

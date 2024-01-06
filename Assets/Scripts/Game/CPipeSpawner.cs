@@ -12,7 +12,7 @@ public class CPipeSpawner : CObjectSpawner
             Spawn(fPipeSpeed * m_fSpawnDeltaTime * 2);
             Spawn(fPipeSpeed * m_fSpawnDeltaTime);
             Spawn();
-            }
+        }
     }
 
     public void UpdatePipeTheme()
