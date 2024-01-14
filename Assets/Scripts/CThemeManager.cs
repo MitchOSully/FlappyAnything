@@ -5,14 +5,27 @@
      * Palette
      * Skin (too squeamish)
      * Flappy
+     * World?
+     * Render?
 */
+
+[System.Serializable]
+public class CTheme
+{
+    public Sprite m_player;
+    public Sprite m_pipe;
+    public Sprite m_rocket;
+    //public Sprite m_coin;
+    //public Sprite m_background;
+    //public Sound m_music; //Sound is not the class name. Find out what it is
+}
 
 public class CThemeManager : MonoBehaviour //Singleton
 {
     public static CThemeManager Instance;
 
     public int m_themeID = C.THEME_ID_BASIC;
-    
+
     [SerializeField]
     private CTheme[] m_themes;
 
