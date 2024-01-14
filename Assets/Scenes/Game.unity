@@ -1159,13 +1159,13 @@ MonoBehaviour:
     m_fMoveSpeed: 0
     m_vStartPos: {x: 0, y: 0, z: 0}
   - m_layer: {fileID: 1527476088}
-    m_fMoveSpeed: 0.001
+    m_fMoveSpeed: 0.0005
     m_vStartPos: {x: 0, y: 0, z: 0}
   - m_layer: {fileID: 172634124}
-    m_fMoveSpeed: 0.002
+    m_fMoveSpeed: 0.00075
     m_vStartPos: {x: 0, y: 0, z: 0}
   - m_layer: {fileID: 1412789710}
-    m_fMoveSpeed: 0.003
+    m_fMoveSpeed: 0.001
     m_vStartPos: {x: 0, y: 0, z: 0}
 --- !u!4 &468089971
 Transform:
