@@ -15,6 +15,7 @@ public class CTheme
     public Sprite m_player;
     public Sprite m_pipe;
     public Sprite m_rocket;
+    public Sprite[] m_aBackgroundLayers;
     //public Sprite m_coin;
     //public Sprite m_background;
     //public Sound m_music; //Sound is not the class name. Find out what it is
@@ -40,6 +41,10 @@ public class CThemeManager : MonoBehaviour //Singleton
     public static Sprite CurrentRocket()
     {
         return Instance.m_themes[Instance.m_themeID].m_rocket;
+    }
+    public static Sprite[] CurrentBackgroundLayers()
+    {
+        return Instance.m_themes[Instance.m_themeID].m_aBackgroundLayers;
     }
 
     private void Awake()

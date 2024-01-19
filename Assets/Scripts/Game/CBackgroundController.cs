@@ -19,6 +19,7 @@ public class CBackgroundController : MonoBehaviour
     private float m_fBoundX;    
     private void Start()
     {
+        SetTheme();
         float fScale = DefineBoundsAndGetScale();
         InitialiseLayers(fScale);
     }
@@ -26,6 +27,19 @@ public class CBackgroundController : MonoBehaviour
     private void Update()
     {
         MoveLayers();
+    }
+
+    private void SetTheme()
+    {
+        Sprite[] aBackgroundSprites = CThemeManager.CurrentBackgroundLayers();
+        for (int ii = 0; ii < m_aLayers.Length; ii++)
+        {
+            SpriteRenderer renderer = m_aLayers[ii].m_layer.GetComponent<SpriteRenderer>();
+            if (renderer != null && ii < aBackgroundSprites.Length) //These should always be true
+            {
+                renderer.sprite = aBackgroundSprites[ii];
+            }
+        }
     }
 
     private float DefineBoundsAndGetScale()
