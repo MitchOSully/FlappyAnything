@@ -2097,6 +2097,14 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 3c1097b5617a80f40830426c4685577f, type: 3}
     - {fileID: 21300000, guid: 517ce2d799f683c41a72163017cb9c04, type: 3}
     - {fileID: 21300000, guid: 18dddd68dcd64e24593fddcccf038a9b, type: 3}
+  - m_player: {fileID: 21300000, guid: 09f44df653ea31641898d151bf085759, type: 3}
+    m_pipe: {fileID: 21300000, guid: f19997215bff42c46b11aad44273422d, type: 3}
+    m_rocket: {fileID: 21300000, guid: a5649c379951f3b438b0822bf6121031, type: 3}
+    m_aBackgroundLayers:
+    - {fileID: 21300000, guid: 43ebca262c68b5a4eb9b9e4475c8ba1b, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 21300000, guid: f67dac5bb66f23f4dacb1f47f2e436d3, type: 3}
 --- !u!4 &2105847131
 Transform:
   m_ObjectHideFlags: 0

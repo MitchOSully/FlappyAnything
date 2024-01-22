@@ -11,6 +11,7 @@ public class CStartScreen : MonoBehaviour
 
     private void Start()
     {
+        CThemeManager.Instance.m_themeID = C.THEME_ID_CLASSIC_PIXEL; //To do: remove this and implement button on themes page
         m_playerImage.sprite = CThemeManager.CurrentPlayer();
     }
 

@@ -7,4 +7,5 @@
 
     public const int THEME_ID_BASIC = 0;
     public const int THEME_ID_HANDDRAWN = 1;
+    public const int THEME_ID_CLASSIC_PIXEL = 2;
 }
