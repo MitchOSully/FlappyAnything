@@ -58,11 +58,15 @@ public class CThemeScreen : MonoBehaviour
         m_tempThemeID = C.THEME_ID_BASIC;
         m_lastSelectedButton = m_buttons[C.THEME_ID_BASIC];
     }
-    
     public void SetThemeToHanddrawn()
     {
         m_tempThemeID = C.THEME_ID_HANDDRAWN;
         m_lastSelectedButton = m_buttons[C.THEME_ID_HANDDRAWN];
+    }
+    public void SetThemeToClassicPixel()
+    {
+        m_tempThemeID = C.THEME_ID_CLASSIC_PIXEL;
+        m_lastSelectedButton = m_buttons[C.THEME_ID_CLASSIC_PIXEL];
     }
 
     private void UpdateLockedThemes()
