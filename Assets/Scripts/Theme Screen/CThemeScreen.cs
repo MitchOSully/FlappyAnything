@@ -20,6 +20,7 @@ public class CThemeScreen : MonoBehaviour
         m_buttons = GetComponentsInChildren<Button>();
         m_buttons = m_buttons.Where(butt => butt.tag == "ThemeButton").ToArray();
 
+        m_tempThemeID = CThemeManager.Instance.m_themeID;
         UpdateLockedThemes();
         SelectActiveTheme();
     }
